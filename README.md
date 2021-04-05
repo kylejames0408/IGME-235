@@ -10,7 +10,7 @@ The class that this repository represents showcases some web development skills 
 **LAST CONTENT UPDATE:** 8-December-2020
 
 # Important External Links
-- https://people.rit.edu/kcj7751/235/ | This is a public link to the live version of the website created in class showcasing all web development and media work. It acts as a directory linking to other projects completed during the class.
+- https://people.rit.edu/kcj7751/235/ | This is a public link to the live version of the website created in class showcasing all web development work. It acts as a directory linking to other projects completed during the class.
 
 # ABOUT ME
 Greetings,
