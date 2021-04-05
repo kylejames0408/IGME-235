@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>DOM-3</title>
+    <style>
+        body {
+            border: 1px solid gray;
+        }
+
+        p b {
+            transform: rotate(20deg)
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Page</h1>
+    <h2>Info</h2>
+    <h2>Pictures</h2>
+    <h2>More Info</h2>
+    <p>Blah <b>Blah</b> Blah</p>
+    <p>Blah <b>Blah</b> Blah</p>
+    <p id="lastParagraph">Blah <b>Blah</b> Blah</p>
+    <footer>Copyright &copy; <b>20XX</b></footer>
+    <script>
+        "use strict";
+
+        // add your own code here.
+        document.querySelector("h1").innerHTML = "My UFO Page";                 // #1
+        document.querySelector("h2").innerHTML = "My UFO Info";                 // #2
+        document.querySelector("h2:nth-of-type(2)").innerHTML = "My UFO Page";  // #3
+        document.querySelector("h2:nth-of-type(3)").innerHTML = "";             // #4
+
+        // #5 Start
+        let body = document.body;
+        body.style.fontFamily = "sans-serif";
+        body.style.color = "#A44";           // #5 End
+
+        // #6 Start
+        let p1 = document.querySelector("p");
+        p1.innerHTML = "Report your UFO sightings here: <a href='http://www.nuforc.org'>http://www.nuforc.org</a>";
+        p1.style.color = "green";
+        p1.style.fontWeight = "bold";
+        p1.style.fontSize = "2em";
+        p1.style.textTransform = "uppercase";
+        p1.style.textShadow = "3px 2px #A44";                                                                       // #6 End
+
+        document.querySelector("p:nth-of-type(2)").innerHTML = "";                                                                                                                                              // #7
+        document.querySelector("p:nth-of-type(3)").innerHTML = "<img src='https://cbsnews1.cbsistatic.com/hub/i/2017/04/26/8665d4a6-958f-486d-933f-c1bad6e5589a/istock-523250164.jpg' alt='UFO' width=100%>";   // #8
+        document.querySelector("footer").innerHTML = "&copy 2020 Kyle James.";                                                                                                                                  // #9
+    </script>
+</body>
+
+</html>

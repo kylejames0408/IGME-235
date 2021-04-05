@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-6</title>
+	<style>
+		body{
+			font-family:sans-serif;
+		}
+		#colorform{
+			background-color:#dfecdf;
+			color: #111;
+			padding:1em;width:400px;
+		}
+		#colorform p#info{
+			background-color:white;
+			color: black;
+			width:300px;
+			height:100px;
+			padding:.5em;
+		}
+		
+		#colorform legend{ 
+			font-weight:bold;
+			font-size:1.2em;
+		}
+	</style>
+</head>
+<body>
+
+<div id="colorform">
+	<legend>Choose your favorite colors!</legend>
+	<p><input type="checkbox" name="colorGroup" id="colorGroupRed" value="red" /> Red</p>
+	<p><input type="checkbox" name="colorGroup" id="colorGroupGreen" value="green" /> Green</p>
+	<p><input type="checkbox" name="colorGroup" id="colorGroupBlue" value="blue" /> Blue</p>
+	<p><button id="colorButton" type="button">Submit</button></p>
+	<p id="info"></p>
+</div>
+
+<script>
+	// COULD 100% be cleaned up, maybe come back at a later time.
+    let colorGroups = document.querySelectorAll("input[name='colorGroup']");
+    let submit = document.querySelector("#colorButton");
+    let output = document.querySelector("#info");
+	let numChecked = 0;
+	let temp = 0;
+
+    for (let i = 0; i < colorGroups.length; i++) {
+        colorGroups[i].onchange = function(e) {
+			if (colorGroups[i].checked) {
+				numChecked += 1;
+			}
+			else {
+				numChecked -= 1;
+			}
+
+			switch (numChecked) {
+				case 0:
+					output.innerHTML = "";
+					break;
+				case 1:
+					for (let j = 0; j < colorGroups.length; j++) {
+						if (colorGroups[j].checked) {
+							output.innerHTML = `You have selected ${colorGroups[j].value}!`;
+						}
+					}
+					break;
+				case 2:
+					temp = 0;
+					output.innerHTML = "You have selected";
+					for (let j = 0; j < colorGroups.length; j++) {
+						if (colorGroups[j].checked) {
+							temp += 1;
+							if (temp == 1) {
+								output.innerHTML = `${output.innerHTML} ${colorGroups[j].value}`;
+							}
+							else {
+								output.innerHTML = `${output.innerHTML} and ${colorGroups[j].value}!`;
+							}
+						}
+					}
+					break;
+				case 3:
+					temp = 0;
+					output.innerHTML = "You have selected";
+					for (let j = 0; j < colorGroups.length; j++) {
+						if (colorGroups[j].checked) {
+							temp += 1;
+							if (temp == 1) {
+								output.innerHTML = `${output.innerHTML} ${colorGroups[j].value},`;
+							}
+							else if (temp == 2) {
+								output.innerHTML = `${output.innerHTML} ${colorGroups[j].value},`;
+							}
+							else {
+								output.innerHTML = `${output.innerHTML} and ${colorGroups[j].value}!`;
+							}
+						}
+					}
+					break;
+			}
+        }
+    }
+
+    submit.onclick = function(e) {
+        for (let i = 0; i < colorGroups.length; i++) {
+			switch (numChecked) {
+				case 0:
+					output.innerHTML = "";
+					break;
+				case 1:
+					for (let j = 0; j < colorGroups.length; j++) {
+						if (colorGroups[j].checked) {
+							output.innerHTML = `Your FINAL CHOICE is ${colorGroups[j].value}!`;
+						}
+					}
+					break;
+				case 2:
+					temp = 0;
+					output.innerHTML = "Your FINAL CHOICE is";
+					for (let j = 0; j < colorGroups.length; j++) {
+						if (colorGroups[j].checked) {
+							temp += 1;
+							if (temp == 1) {
+								output.innerHTML = `${output.innerHTML} ${colorGroups[j].value}`;
+							}
+							else {
+								output.innerHTML = `${output.innerHTML} and ${colorGroups[j].value}!`;
+							}
+						}
+					}
+					break;
+				case 3:
+					temp = 0;
+					output.innerHTML = "Your FINAL CHOICE is";
+					for (let j = 0; j < colorGroups.length; j++) {
+						if (colorGroups[j].checked) {
+							temp += 1;
+							if (temp == 1) {
+								output.innerHTML = `${output.innerHTML} ${colorGroups[j].value},`;
+							}
+							else if (temp == 2) {
+								output.innerHTML = `${output.innerHTML} ${colorGroups[j].value},`;
+							}
+							else {
+								output.innerHTML = `${output.innerHTML} and ${colorGroups[j].value}!`;
+							}
+						}
+					}
+					break;
+			}
+        }
+    }
+</script>
+</body>
+</html>

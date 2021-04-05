@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <script src="js/index.js"></script>
+    <script src="js/mobileDropdown.js"></script>
+</head>
+<body>    
+<header></header>
+
+<nav>
+    <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="#credits">CREDITS</a></li>
+    </ul>
+    <div>
+        <button class="mobileDropdownButton" onclick="mobileDropdown()"></button>
+        <div id="mobileDropdownContent">
+            <a href="">HOME</a>
+            <a href="#credits">CREDITS</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section id="typeSearch">
+        Search Character<br><input id="searchterm" type="text" size="20" maxlength="20" autofocus value="Rick" />
+    </section>
+
+    <section id="filters">
+        <legend>Character's Status</legend>
+        <div id="deadoralive">
+            <p><input type="radio" name="characterStatus" id="characterStatusAlive" value="&status=alive" /> Alive</p>
+            <p><input type="radio" name="characterStatus" id="characterStatusDead" value="&status=dead" /> Dead</p>
+            <p><input type="radio" name="characterStatus" id="characterStatusUnknown" value="&status=unknown" /> Unknown</p>
+        </div>
+    </section>
+
+    <div class="widgets">
+        <button type="button" id="search" class="green">Search the Rick and Morty Multiverse</button>
+    </div>
+    <div id="status">Ready to Search!</div>
+
+    <h2>Results</h2>
+    <div id="content">
+        <p>No data yet!</p>
+    </div>
+</main>
+ 
+<footer>
+    <div>
+        <h4 id="credits">CREDITS</h4>
+        <ul>
+            <li><a href="https://rickandmortyapi.com/">Rick and Morty API</a></li>
+        </ul>
+    </div>
+    <div>
+        <h4>SOCIALS</h4>
+        <ul>
+            <li><a href="https://rit-csm.symplicity.com/profiles/kyle.james">CareerConnect</a></li>
+            <li><a href="https://github.com/kylejames0408">GitHub</a></li>
+            <li><a href="https://my.indeed.com/p/kylej-miida6r">Indeed</a></li>
+            <li><a href="https://jumpstart.me/profile/kyle-james">Jumpstart</a></li>
+            <li><a href="https://www.linkedin.com/in/kylejames0408/">LinkedIn</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2020 Kyle James</p>
+</footer>
+</body>
+</html>

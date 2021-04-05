@@ -1,0 +1,59 @@
+body {
+    background: url("../images/background.png");
+    font-family: Arial, sans-serif;
+}
+
+main, header, footer {
+    background-color: white;
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 80vw;
+    padding: 2rem;
+}
+
+h1 {
+    color: red;
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 1px solid #72A276;
+}
+
+h2 {
+    color: green;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    margin-left: 100px;
+}
+
+a:link {
+    color: #72A276;
+}
+
+a:visited {
+    color: #666B6A;
+}
+
+footer {
+    background-color: #86CD82;
+}
+
+footer p {
+    border: 1px solid gray;
+    margin-left: 0;
+    padding: 50px;
+}
+
+blockquote {
+    background-color: lightgray;
+    padding: 1rem;
+}
+
+img {
+    border: 7px solid #A0EEC0;
+}
+
+img.side {
+    float: right;
+    margin: 0 12px;
+}

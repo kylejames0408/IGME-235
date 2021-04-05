@@ -1,0 +1,183 @@
+/* Import External CSS */
+@import url(stylesheet.css);
+
+/* PROJECTS */
+#projects {
+    display: grid;
+    grid-template-areas: 
+        "p1"
+        "p2"
+        "p3"
+        "p4"
+        "p5"
+        "p6";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+#p1, #p2, #p3, #p4, #p5, #p6 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .5s ease;
+}
+
+#projects img {
+    margin: 4rem 0;
+    max-width: 70px;
+    transition: .5s ease;
+}
+
+#p1 {
+    background-color: #E4CA99;
+    grid-area: p1;
+}
+
+#p2 {
+    background-color: #EAF2F4;
+    grid-area: p2;
+}
+
+#p3 {
+    background-color: #A4C9D7;
+    grid-area: p3;
+}
+
+#p4 {
+    background-color: #DC7684;
+    grid-area: p4;
+}
+
+#p5 {
+    background-color: #A1B6B4;
+    grid-area: p5;
+}
+
+#p6 {
+    background-color: #AEDDE0;
+    grid-area: p6;
+}
+
+#projects p {
+    margin: 0 10%;
+    width: 80%;
+}
+
+#projects>a {
+    color: #333;
+    padding: 4rem 0;
+}
+
+#p1:hover, #p2:hover, #p3:hover, #p4:hover, #p5:hover, #p6:hover {
+    box-shadow: inset 0 0 100vw 100vw rgba(0, 0, 0, 0.1);
+    color: #222;
+    padding: 3rem 0;
+}
+
+#p1:hover img, #p2:hover img, #p3:hover img, #p4:hover img, #p5:hover img, #p6:hover img {
+    margin: 5rem 0;
+}
+
+/* CONTACT */
+#contact {
+    display: grid;
+    grid-template-areas:
+        "image"
+        "content";
+    grid-template-rows: 1fr 4fr;
+}
+
+#contact>div:first-child {
+    background-color: #729AD3;
+    color: #333;
+    grid-area: content;
+    padding: 3rem;
+}
+
+#contact>div:first-child a {
+    color: #333;
+}
+
+#contact>div:first-child>h3>a {
+    transition: .5s ease;
+}
+
+#contact>div:first-child>h3>a:hover {
+    color: #ECEBE8;
+}
+
+#contact>div:first-child>p {
+    padding-top: 2rem;
+}
+
+#contact>div:first-child>p>a {
+    font-size: 2rem;
+    margin-right: 1rem;
+    transition: .5s ease;
+}
+
+#contact>div:first-child>p>a:hover {
+    color: #ECEBE8;
+}
+
+#contact>div:last-child {
+    background-image: url(../media/pfp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: image;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+    #contact>div:last-child {
+        background-position: 0 15%;
+    }
+}
+@media screen and (min-width: 900px) {
+    /* PROJECTS */
+    #projects {
+        grid-template-areas: 
+            "p1 p1"
+            "p2 p3"
+            "p4 p4"
+            "p5 p6";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    #p1 p, #p4 p {
+        margin: 0 30%;
+        width: 40%;
+    }
+    
+    #p2 p, #p3 p, #p5 p, #p6 p {
+        margin: 0 20%;
+        width: 60%;
+    }
+
+    /* CONTACT */
+    #contact {
+        grid-template-rows: 1fr 2fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* CONTACT */
+    #contact {
+        grid-template-areas:
+            "content image";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #contact>div:first-child>a:first-child {
+        font-size: 9.5vmin;
+    }
+    
+    #contact>div:last-child {
+        background-position: 60% 0;
+    }
+}

@@ -1,0 +1,16 @@
+/* IMPORT EXTERNAL CSS */
+@import url(stylesheet.css);
+
+/* PAGE-SPECIFIC STYLING */
+p {
+    border-left: 0.25rem solid #333;
+    padding-left: 0.5rem;
+}
+
+span {
+    background: black;
+    color: #ECEBE8;
+    border-radius: 1px;
+    font-family: 'Press Start 2P', cursive;
+    padding: .125rem;
+}

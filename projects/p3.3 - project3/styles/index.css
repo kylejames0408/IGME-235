@@ -1,0 +1,30 @@
+/* IMPORT EXTERNAL CSS */
+@import url(stylesheet.css);
+
+main {
+    margin: 5rem 0;
+}
+
+#hiscore {
+    background-color: black;
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#game {
+    background-color: black;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#gameinfo {
+    background: black;
+    color: red;
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+}

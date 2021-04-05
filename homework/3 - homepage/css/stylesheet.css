@@ -1,0 +1,205 @@
+/* Import Necessary CSS Sheets. */
+@import url(css-reset.css);     /* Resets Default CSS. */
+@import url(font-awesome.css);  /* Imports Font Awesome Icons. */
+
+/* Import Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');   /* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');    /* Open Sans */
+
+/* Unique CSS To This Sheet. */
+body {
+    background: url(../images/background.png);
+}
+
+header {
+    background: url(../images/banner-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw;
+    padding: 5vh;
+}
+
+header h1 {
+    color: #148E8D;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw;
+    text-align: center;
+}
+
+nav {
+    box-shadow: 0vw 1vh 1rem 0 rgba(0,0,0,1);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    background-color: #333;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: #ECEBE8;
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vmax;
+    padding: 2vh 2vw;
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: #ECEBE8;
+}
+
+nav ul li a:focus {
+    color: #148E8D;
+}
+
+nav ul li a:hover {
+    background-color: #148E8D;
+}
+
+nav ul li a:active {
+    background-color: #148E8D;
+    color: #333;
+}
+
+main {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.light, .dark {
+    border-radius: 1.5vw;
+    box-shadow: 0 1vh 1rem 0 rgba(0,0,0,0.5);
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 7.5vh;
+    padding-bottom: 5vh;
+}
+
+.light h2, .dark h2 {
+    border-bottom: 1vmin solid #148E8D;
+    font-size: 2vmax;
+    margin-bottom: 1vh;
+    padding: 2.5vh 0;
+    text-align: center;
+}
+
+.light {
+    background-color: white;
+    color: #333;
+}
+
+.dark {
+    background-color: #333;
+    color: #ECEBE8;
+}
+
+#biography {
+    background-color: #333;
+    box-shadow: 0 1vh 1rem 0 rgba(0,0,0,0.5);
+    margin: 0 auto;
+    padding: 2.5vh 2.5vw;
+    width: 33.33vw;
+}
+
+#biography img {
+    border-radius: 5vw;
+    display: block;
+    margin: 0 auto;
+    width: 10vw;
+}
+
+#biography h3 {
+    color: #ECEBE8;
+    font-size: 1.5vmax;
+    text-align: center;
+}
+
+#biography p{
+    color: #ECEBE8;
+    text-align: justify;
+}
+
+#projects ul {
+    background-color: #ECEBE8;
+    box-shadow: 0vw 1vh 1rem 0 rgba(0,0,0,1);
+    list-style-type: none;
+    margin-bottom: 10vh;
+    overflow: hidden;
+}
+
+#projects ul li a {
+    color: #333;
+    float: left;
+    font-size: 1.5vmax;
+    padding: 2vh 2vw;
+    text-decoration: none;
+}
+
+#projects ul li a:visited {
+    color: #333;
+}
+
+#projects ul li a:focus {
+    color: #148E8D;
+}
+
+#projects ul li a:hover {
+    background-color: #148E8D;
+}
+
+#projects ul li a:active {
+    background-color: #148E8D;
+    color: #ECEBE8;
+}
+
+#projects p {
+    text-align: center;
+}
+
+#projects p a {
+    color: #ECEBE8;
+}
+
+#projects p a i {
+    border-radius: 5vh;
+    color: #ECEBE8;
+    font-size: 5vw;
+    margin-top: 10vh;
+}
+
+#projects p a:visited i {
+    color: #ECEBE8;
+}
+
+#projects p a:focus i {
+    color: #148E8D;
+}
+
+#projects p a:hover i {
+    background-color: #148E8D;
+}
+
+#projects p a:active i {
+    background-color: #148E8D;
+    color: #333;
+}
+
+footer {
+    bottom: 0;
+    background-color: #333;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,1);
+    color: #ECEBE8;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 7.5vh;
+    padding: 2.5vh 10vw;
+}
+
+/* Responsive layout at screen width below 600px. */
+@media screen and (max-width: 900px) {
+    #biography {
+        width: 66.666vw;
+    }
+}

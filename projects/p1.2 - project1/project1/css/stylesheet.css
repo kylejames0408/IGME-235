@@ -1,0 +1,295 @@
+/* Import External CSS */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+
+/* Import Necessary Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');   /* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');    /* Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');              /* Overpass */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');                 /* Inter */
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* GENERAL STYLING */
+body {
+    background-color: #ECEBE8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    color: #333;
+    font-size: 18vw;
+    font-weight: 800;
+    margin-top: 5rem;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h4 {
+    border-bottom: 0.5vmin solid #ECEBE8;
+}
+
+section {
+    margin-top: -1rem;
+}
+
+section:last-child {
+    margin-bottom: 5rem;
+}
+
+/* TOP NAVIGATION */
+body>nav {
+    align-items: center;
+    background-color: #333;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+body>nav>ul {
+    display: none;
+}
+
+.mobileDropdownButton {
+    background-color: inherit;
+    background-image: url(../media/bars-solid.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #ECEBE8;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    margin: .75rem .75rem;
+    padding: .75rem .75rem;
+}
+
+body>nav>div>div {
+    background-color: #333;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+body>nav>div>div>a:link {
+    color: #ECEBE8;
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+body>nav a:visited {
+    color: #ECEBE8;
+}
+
+body>nav a:after {
+    content: '';
+    width: 0;
+    height: 0.1875rem;
+    display: block;
+    right: 0;
+    background: #E4CA99;
+    transition: width .5s ease;
+}
+
+body>nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.show {
+    display: block;
+}
+
+/* HEADER */
+header {
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: -0.25%;
+    position: relative;
+    text-align: center;
+}
+
+header>h1 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -75%);
+}
+
+header>p {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -60%);
+}
+
+/* MAIN */
+main {
+    font-family: 'Inter', sans-serif;
+    margin: 0 10%;
+}
+
+/* FOOTER */
+footer {
+    bottom: 0;
+    background-color: #333;
+    color: #ECEBE8;
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    grid-template-areas:
+        "explore"
+        "socials"
+        "jobFiles"
+        "copyright";
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 7.5% 1.5rem 7.5%;
+}
+
+footer>nav, footer>div, footer>ul, footer>p {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+footer>nav {
+    grid-area: explore;
+}
+
+footer>div:first-child {
+    grid-area: socials;
+}
+
+footer>div:last-child {
+    grid-area: jobFiles;
+}
+
+footer ul li {
+    padding-top: 1rem;
+}
+
+footer ul li a:link {
+    color: #ECEBE8;
+}
+
+footer ul li a:visited {
+    color: #ECEBE8;
+}
+
+footer ul li a:focus {
+    color: #E4CA99;
+}
+
+footer ul li a:hover {
+    color: #E4CA99;
+}
+
+footer ul li a:active {
+    color: #E4CA99;
+}
+
+footer>p {
+    grid-area: copyright;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+    /* GENERIC */
+    section {
+        margin-top: -2rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /* GENERIC */
+    h2 {
+        font-size: 10rem;
+    }
+
+    h3 {
+        font-size: 9.5vmin;
+    }
+
+    section {
+        margin-top: -3rem;
+    }
+
+    /* TOP NAVIGATION */
+    body>nav>ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body>nav>ul>li {
+        font-size: 1rem;
+    }
+    
+    body>nav>ul>li>a:link {
+        color: #ECEBE8;
+        display: inline-block;
+        padding: 1rem 5vw 0.75rem 5vw;
+    }
+
+    body>nav>div {
+        display: none;
+    }
+
+    /* HEADER */
+    header>h1 {
+        top: 45%;
+    }
+    
+    header>p {
+        top: 55%;
+    }
+
+    /* FOOTER */
+    footer {
+        grid-column-gap: 10vw;
+        grid-template-areas:
+            "explore    socials     jobFiles"
+            "copyright  copyright   copyright";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    
+    footer>nav>ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    footer>div>ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    footer ul li {
+        flex-basis: 50%;
+    }
+}

@@ -1,0 +1,107 @@
+/* Import External CSS */
+@import url(stylesheet.css);
+
+/* PROJECTS */
+#project {
+    display: grid;
+    grid-template-areas: 
+        "about"
+        "tools"
+        "skills"
+        "role"
+        "play";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+#project>div, #project>a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .5s ease;
+}
+
+#project img {
+    margin: 4rem 0;
+    max-width: 70px;
+    transition: .5s ease;
+}
+
+#about {
+    background-color: #E4CA99;
+    grid-area: about;
+}
+
+#tools {
+    background-color: #EAF2F4;
+    grid-area: tools;
+}
+
+#skills {
+    background-color: #A4C9D7;
+    grid-area: skills;
+}
+
+#role {
+    background-color: #DC7684;
+    grid-area: role;
+}
+
+#project>a {
+    background-color: #B2E3B0;
+    grid-area: play;
+}
+
+#project p {
+    margin: 0 10%;
+    width: 80%;
+}
+
+#project>a, #project>div {
+    color: #333;
+    padding: 4rem 0;
+}
+
+#about:hover, #tools:hover, #skills:hover, #role:hover, #project>a:hover {
+    padding: 3rem 0;
+}
+
+#project>a:hover {
+    box-shadow: inset 0 0 100vw 100vw rgba(0, 0, 0, 0.1);
+    color: #222;
+    padding: 3rem 0;
+}
+
+#about:hover img, #tools:hover img, #skills:hover img, #role:hover img {
+    margin: 5rem 0;
+}
+
+#project>a:hover img {
+    margin: 5rem 0;
+}
+
+/* Media Queries */
+@media screen and (min-width: 900px) {
+    /* PROJECTS */
+    #project {
+        grid-template-areas: 
+            "about      about"
+            "tools      skills"
+            "role       role"
+            "play       play";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    #about p, #role p, #project>a p {
+        margin: 0 30%;
+        width: 40%;
+    }
+    
+    #tools p, #skills p{
+        margin: 0 20%;
+        width: 60%;
+    }
+}

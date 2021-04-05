@@ -1,0 +1,266 @@
+/* Reset CSS */
+@import url("bootstrap-reboot.css");
+
+/* Import Fonts */
+@font-face {
+    font-family: 'retro_computerregular';
+    src: url('../fonts/retro_computer_personal_use-webfont.woff2') format('woff2'),
+         url('../fonts/retro_computer_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dogica_pixelregular';
+    src: url('../fonts/dogicapixel-webfont.woff2') format('woff2'),
+         url('../fonts/dogicapixel-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Generic Styles */
+body {
+    background-color: #35363D;
+    color: white;
+}
+
+h1, h2 {
+    font-family: "retro_computerregular";
+}
+
+p {
+    font-family: "dogica_pixelregular";
+    font-size: 0.75rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+/* Header */
+header {
+    background-color: #686868;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: header;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+header h2 {
+    align-self: center;
+}
+
+header img {
+    color: white;
+    filter: invert(100%);
+    height: 5vh;
+}
+
+header img {
+    max-width: 10%;
+}
+
+header p {
+    align-self: center;
+    margin: 0;
+    text-align: right;
+}
+
+/* Set up Grid */
+#wrapper {
+    display: grid;
+    grid-template-areas:
+            "tree"
+            "crafting";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    row-gap: 4vh;
+}
+
+/* Tree Section */
+#tree {
+    display: grid;
+    grid-area: tree;
+    grid-template-areas:
+        "tfig"
+        "tinfo";
+    grid-template-rows: 1fr 1fr;
+    margin: 0 10%;
+    margin-top: 4vh;
+    row-gap: 2vh;
+}
+
+#tinfo {
+    background-color: #686868;
+    grid-area: tinfo;
+    padding: 1vw;
+}
+
+#tfig {
+    align-items: center;
+    background-image: radial-gradient(ellipse at -80% -80%, #E8FDF5, #244D3E);
+    border: 4px solid white;
+    display: flex;
+    justify-content: center;
+    grid-area: tfig;
+}
+
+#tfig img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Valley Break */
+#valley {
+    display: none;
+}
+
+/* Crafting Section */
+#crafting {
+    column-gap: 2vh;
+    display: grid;
+    grid-area: crafting;
+    grid-template-areas: 
+        "planks     pinfo"
+        "sticks      sinfo"
+        "chests     cinfo"
+        "stairs      stinfo";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0 10%;
+    row-gap: 2vh;
+}
+
+#crafting img {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+/* Planks Section */
+#planks {
+    align-items: center;
+    background-color: #324E44;
+    border: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    grid-area: planks;
+}
+
+#pinfo {
+    background-color: #686868;
+    grid-area: pinfo;
+    padding: 1vw;
+}
+
+/* Sticks Section */
+#sticks {
+    align-items: center;
+    background-color: #324E44;
+    border: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    grid-area: sticks;
+}
+
+#sinfo {
+    background-color: #686868;
+    grid-area: sinfo;
+    padding: 1vw;
+}
+
+/* Chests Section */
+#chests {
+    align-items: center;
+    background-color: #324E44;
+    border: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    grid-area: chests;
+}
+
+#cinfo {
+    background-color: #686868;
+    grid-area: cinfo;
+    padding: 1vw;
+}
+
+/* Stairs Section */
+#stairs {
+    align-items: center;
+    background-color: #324E44;
+    border: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    grid-area: stairs;
+}
+
+#stinfo {
+    background-color: #686868;
+    grid-area: stinfo;
+    padding: 1vw;
+}
+
+/* Footer */
+footer {
+    align-items: center;
+    background-image: url(../images/trees.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 4px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh 0;
+}
+
+footer h2:first-child {
+    margin-left: 10%;
+}
+
+footer h2:last-child {
+    margin-right: 10%;
+    text-align: right;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1000px) {
+    #wrapper {
+        grid-template-areas:
+            "tree"
+            "valley"
+            "crafting";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #tree {
+        column-gap: 1vw;
+        grid-template-areas:
+            "tinfo  tfig";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 0;
+    }
+
+    #valley {
+        display: block;
+        background-image: url(../images/valley.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: valley;
+    }
+
+    #crafting {
+        column-gap: 1vw;
+        grid-template-areas: 
+        "planks     pinfo       sticks      sinfo"
+        "chests     cinfo       stairs      stinfo";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 1vw;
+    }
+}
